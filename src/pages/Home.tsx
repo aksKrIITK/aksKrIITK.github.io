@@ -104,7 +104,7 @@ export default function Home() {
 
             <div className="mb-6">
               <label className="block text-sm font-semibold text-slate-900 mb-2">Project Type</label>
-              <select className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent">
+              <select title="Project Type" className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent">
                 <option>Select a project type</option>
                 <option>Website</option>
                 <option>Web App</option>

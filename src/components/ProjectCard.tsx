@@ -27,7 +27,7 @@ export default function ProjectCard({ title, description, tech, image, link }: P
           ))}
         </div>
         {link && (
-          <a href={link} className="mt-4 inline-block text-accent font-semibold hover:gap-2 flex items-center group/link">
+          <a href={link} className="mt-4 text-accent font-semibold hover:gap-2 flex items-center group/link">
             View project
             <span className="ml-2 group-hover/link:translate-x-1 transition-transform">→</span>
           </a>
