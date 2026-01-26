@@ -17,14 +17,6 @@ const experiences = [
   'Redesigned and modernized legacy service architecture to improve scalability and maintainability',
   'Delivered business-critical features with zero downtime using backward-compatible APIs and safe deployment strategies'
 ]
-  },
-  {
-    id: '3',
-    role: 'Junior Developer',
-    company: 'Digital Agency',
-    period: '2018 - 2020',
-    description: 'Started web development journey building responsive websites and learning industry best practices.',
-    achievements: ['10+ client projects', 'Award-winning designs', 'Excellent feedback']
   }
 ]
 

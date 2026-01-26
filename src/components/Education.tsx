@@ -2,27 +2,36 @@ const educations = [
   {
     id: '1',
     degree: 'Bachelor of Technology',
-    field: 'Computer Science & Engineering',
+    field: 'Electrical & Engineering',
     school: 'Indian Institute of Technology (IIT) Kanpur',
-    period: '2019 - 2023',
-    grade: 'CGPA: 7.8/10',
+    period: '2013 - 2017',
+    grade: 'CGPA: 7/10',
     highlights: ['Data Structures & Algorithms', 'DBMS', 'Operating Systems', 'Software Engineering']
   },
   {
     id: '2',
-    degree: 'Senior Secondary (12th)',
-    field: 'Science Stream',
-    school: 'Saint Mary\'s School, New Delhi',
-    period: '2017 - 2019',
-    grade: 'Percentage: 92%',
-    highlights: ['Physics', 'Chemistry', 'Mathematics', 'Computer Science']
+    degree: 'Master in International Relations',
+    field: 'International Politics',
+    school: 'Jawaharlal Nehru University, New Delhi',
+    period: '2020 - 2022',
+    grade: 'CGPA: 7.5/10',
+    highlights: ['International Politics', 'Diplomacy', 'International Law', 'Global Security']
   },
   {
     id: '3',
+    degree: 'Senior Secondary (12th)',
+    field: 'Science Stream',
+    school: 'Scholar Abode , Patna',
+    period: '2011 - 2013',
+    grade: 'Percentage: 87%',
+    highlights: ['Physics', 'Chemistry', 'Mathematics']
+  },
+  {
+    id: '4',
     degree: 'Secondary (10th)',
     field: 'All Subjects',
-    school: 'Saint Mary\'s School, New Delhi',
-    period: '2015 - 2017',
+    school: 'DAV Public School, Danapur Patna',
+    period: '2009 - 2010',
     grade: 'CGPA: 9.6/10',
     highlights: ['Mathematics', 'Science', 'English', 'Social Studies']
   }
