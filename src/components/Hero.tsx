@@ -19,7 +19,7 @@ export default function Hero() {
             <span className="bg-gradient-to-r from-accent to-blue-600 bg-clip-text text-transparent"> Modern Tech</span>
           </h1>
           <p className="text-xl text-slate-600 leading-relaxed max-w-lg">
-            I'm a software developer specializing in React, TypeScript, and scalable architectures. Passionate about clean code and great user experiences.
+            Backend & Distributed Systems Engineer | Java, Spring Boot, React, AWS | Built Scalable B2B & GenAI Platforms | IIT Kanpur
           </p>
           <div className="flex flex-wrap gap-3 pt-4">
             <a className="px-8 py-4 bg-accent text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-accent/50 transition-all transform hover:-translate-y-1" href="#projects">

@@ -1,19 +1,22 @@
 const experiences = [
   {
     id: '1',
-    role: 'Senior Frontend Developer',
-    company: 'Tech Corp Inc.',
-    period: '2022 - Present',
-    description: 'Leading frontend architecture and mentoring junior developers. Built scalable React applications serving 100k+ users.',
+    role: 'Backend Developer',
+    company: 'WorldRef Technologies Pvt. Ltd.',
+    period: 'June 2024 - August 2024',
+    description: 'Owned and maintained RESTful APIs using Java Spring boot & RDBMS. Improved system performance by optimizing database queries and implementing notification system (mail and document automatic generation). These features directly enhanced and scaled the B2B platform revenue and also enhance the ease of doing business for users.',
     achievements: ['Led 3 major product launches', '95% test coverage', 'Mentored 5+ developers']
   },
   {
     id: '2',
     role: 'Full Stack Developer',
-    company: 'StartUp Co.',
-    period: '2020 - 2022',
-    description: 'Built full-stack features with React and Node.js. Optimized database queries reducing load time by 60%.',
-    achievements: ['50% performance improvement', 'Architecture redesign', 'Zero downtime deployment']
+    company: 'WorldRef Technologies Pvt. Ltd.',
+    period: 'Sept 2024 - present',
+    description: 'Owned the end-to-end design and implementation of backend APIs for multiple business-critical workflows, including search, notifications, PDF generation, and order tracking, built on Java Spring Boot–based microservices. Led the modernization and optimization of legacy backend services by identifying performance bottlenecks, refactoring critical code paths, and improving data access layers, achieving approximately a 30% reduction in response latency. Designed and evolved SQL schemas and query strategies to reliably support increasing data volumes and high-concurrency workloads. Delivered full-stack features by closely coordinating backend APIs with React-based user interfaces, ensuring consistency in system behavior and user experience. Collaborated cross-functionally with product managers and designers to define feature scope, balance engineering trade-offs, and deliver scalable, business-aligned solutions.',
+    achievements: ['Improved backend performance by ~30% through code refactoring and database query optimization',
+  'Redesigned and modernized legacy service architecture to improve scalability and maintainability',
+  'Delivered business-critical features with zero downtime using backward-compatible APIs and safe deployment strategies'
+]
   },
   {
     id: '3',
@@ -31,7 +34,7 @@ export default function Experience() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Professional Journey</h2>
-          <p className="text-xl text-slate-600">5+ years of experience building digital products</p>
+          <p className="text-xl text-slate-600">2+ years of experience building scalable, secure & intelligent systems</p>
         </div>
 
         <div className="relative">

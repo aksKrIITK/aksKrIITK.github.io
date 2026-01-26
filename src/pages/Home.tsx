@@ -2,6 +2,7 @@ import Nav from '../components/Nav'
 import Hero from '../components/Hero'
 import Skills from '../components/Skills'
 import Experience from '../components/Experience'
+import Education from '../components/Education'
 import ProjectCard from '../components/ProjectCard'
 import Testimonials from '../components/Testimonials'
 import Footer from '../components/Footer'
@@ -66,6 +67,7 @@ export default function Home() {
       <Hero />
       <Skills />
       <Experience />
+      <Education />
 
       <section id="projects" className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6">

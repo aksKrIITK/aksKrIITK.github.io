@@ -13,6 +13,9 @@ export default function Nav() {
           <a href="#experience" className="hover:text-accent transition font-medium">
             Experience
           </a>
+          <a href="#education" className="hover:text-accent transition font-medium">
+            Education
+          </a>
           <a href="#projects" className="hover:text-accent transition font-medium">
             Projects
           </a>
