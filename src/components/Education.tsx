@@ -2,7 +2,7 @@ const educations = [
   {
     id: '1',
     degree: 'Bachelor of Technology',
-    field: 'Electrical & Engineering',
+    field: 'Electrical Engineering',
     school: 'Indian Institute of Technology (IIT) Kanpur',
     period: '2013 - 2017',
     grade: 'CGPA: 7/10',
