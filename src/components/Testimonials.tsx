@@ -3,21 +3,21 @@ const testimonials = [
     id: '1',
     name: 'Sarah Johnson',
     role: 'Product Manager, TechCorp',
-    text: 'Aakashi delivered exceptional work on our React rewrite. His attention to code quality and mentorship elevated the entire team.',
+    text: 'Aakash delivered exceptional work on our React rewrite. His attention to code quality and mentorship elevated the entire team.',
     image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&auto=format&fit=crop'
   },
   {
     id: '2',
     name: 'Michael Chen',
     role: 'CEO, StartUp Co.',
-    text: 'In 2 years, he became our most trusted developer. The features he built directly contributed to our 10x growth.',
+    text: 'In 2 years, Aakash became our most trusted developer. The features he built directly contributed to our 10x growth.',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop'
   },
   {
     id: '3',
     name: 'Emily Rodriguez',
     role: 'CTO, Digital Agency',
-    text: 'A rare combination of technical excellence and great communication. He makes complex problems simple and maintainable.',
+    text: 'A rare combination of technical excellence and great communication. Aakash makes complex problems simple and maintainable.',
     image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=400&auto=format&fit=crop'
   }
 ]
