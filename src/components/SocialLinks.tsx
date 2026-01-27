@@ -27,7 +27,7 @@ export default function SocialLinks({ size = 'default' }: { size?: 'small' | 'de
     {
       name: 'Email',
       icon: '✉️',
-      url: 'mailto:aakash@iitk.ac.in',
+      url: 'mailto:akskr.iitk@gmail.com',
       bgColor: 'hover:bg-accent'
     }
   ]

@@ -44,7 +44,7 @@ export default function Footer() {
               <li><a href="https://medium.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition flex items-center gap-2">
                 📝 <span>Medium</span>
               </a></li>
-              <li><a href="mailto:aakash@iitk.ac.in" className="hover:text-accent transition flex items-center gap-2">
+              <li><a href="mailto:akskr.iitk@gmail.com" className="hover:text-accent transition flex items-center gap-2">
                 ✉️ <span>Email</span>
               </a></li>
             </ul>

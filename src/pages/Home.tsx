@@ -125,7 +125,7 @@ export default function Home() {
               Send Message
             </button>
 
-            <p className="text-center text-sm text-slate-600 mt-4">Or reach out directly at <a href="mailto:aakash@iitk.ac.in" className="text-accent font-semibold hover:underline">aakash@iitk.ac.in</a></p>
+            <p className="text-center text-sm text-slate-600 mt-4">Or reach out directly at <a href="mailto:akskr.iitk@gmail.com" className="text-accent font-semibold hover:underline">akskr.iitk@gmail.com</a></p>
           </form>
 
           {/* Social Links Section */}
