@@ -1,11 +1,16 @@
 import { useState, useEffect } from 'react';
 import { useHover } from '../../hooks/useHover';
 
-function NavLink({ href, children }: { href: string; children: string }) {
-  const h = useHover();
+function NavLink({ href, children, active }: { href: string; children: string; active?: boolean }) {
+  const { hovered, ...hoverProps } = useHover();
   return (
-    <a href={href} {...h} className={`font-outfit text-[13px] font-medium tracking-[0.04em] uppercase no-underline transition-colors duration-200 ${h.hovered ? 'text-accent' : 'text-muted'}`}>
+    <a 
+      href={href} 
+      {...hoverProps} 
+      className={`font-poppins text-[14px] font-medium transition-colors duration-200 relative pb-1 ${active || hovered ? 'text-accent' : 'text-muted'}`}
+    >
       {children}
+      {active && <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-accent rounded-full" />}
     </a>
   );
 }
@@ -19,26 +24,32 @@ export function Nav() {
     return () => window.removeEventListener('scroll', h);
   }, []);
 
-  const links = ['Skills','Experience','Education','Projects','Testimonials','Contact'];
+  const links = ['Home', 'Services', 'Portfolio', 'About', 'Contact'];
   
   return (
-    <header className={`fixed top-0 left-0 right-0 z-[9999] h-[68px] flex items-center transition-all duration-300 ${scrolled ? 'backdrop-blur-[20px] bg-[#07091a]/90 border-b border-borderC' : 'bg-transparent border-b border-transparent'}`}>
+    <header className={`fixed top-0 left-0 right-0 z-[9999] h-[80px] flex items-center transition-all duration-300 ${scrolled ? 'backdrop-blur-[20px] bg-bg/90 border-b border-borderC' : 'bg-transparent border-b border-transparent'}`}>
       <div className="max-w-[1200px] mx-auto px-7 w-full flex items-center justify-between">
+        {/* Left: Logo */}
         <a href="#" className="flex items-center gap-2.5 no-underline">
-          <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-accent to-violet flex items-center justify-center font-syne font-extrabold text-bg text-sm">
-            AK
+          <div className="grid grid-cols-3 gap-[2px] w-[22px] h-[22px]">
+            {[...Array(9)].map((_, i) => <div key={i} className={`rounded-sm ${[0,2,4,6,8].includes(i) ? 'bg-accent' : 'bg-accent/50'}`} />)}
           </div>
-          <span className="font-syne font-bold text-textLight text-[17px]">Aakash Kumar</span>
+          <span className="font-sora font-semibold text-textLight text-xl hidden sm:block">Aakash</span>
         </a>
 
-        <nav className="hidden md:flex gap-8 items-center">
+        {/* Center: Links (Hidden on mobile) */}
+        <nav className="hidden md:flex gap-8 items-center justify-center">
           {links.map(l => (
-            <NavLink key={l} href={`#${l.toLowerCase()}`}>{l}</NavLink>
+            <NavLink key={l} href={`#${l.toLowerCase()}`} active={l === 'Home'}>{l}</NavLink>
           ))}
-          <a href="#contact" className="px-5 py-2.5 rounded-lg bg-gradient-to-br from-accent to-violet text-bg font-outfit font-bold text-[13px] no-underline tracking-[0.03em] hover:opacity-90 transition-opacity">
-            Hire Me →
-          </a>
         </nav>
+
+        {/* Right: Button */}
+        <div className="flex justify-end">
+          <a href="#contact" className="px-6 py-3 rounded-full bg-accent text-black font-poppins font-bold text-[13px] no-underline tracking-[0.03em] hover:opacity-90 transition-opacity shadow-[0_4px_14px_rgba(250,204,21,0.3)]">
+            Get in Touch
+          </a>
+        </div>
       </div>
     </header>
   );

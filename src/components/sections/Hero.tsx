@@ -11,101 +11,112 @@ export function Hero() {
   useEffect(() => {
     const t = setInterval(() => {
       setFade(false);
-      setTimeout(() => { 
-        setRi(i => (i + 1) % roles.length); 
-        setFade(true); 
+      setTimeout(() => {
+        setRi(i => (i + 1) % roles.length);
+        setFade(true);
       }, 300);
     }, 2800);
     return () => clearInterval(t);
   }, [roles.length]);
 
   return (
-    <section className="min-h-screen flex items-center relative overflow-hidden pt-[100px] px-7 pb-[80px]">
-      {/* Grid bg */}
-      <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(0,212,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(0,212,255,0.035)_1px,transparent_1px)] bg-[length:70px_70px]" />
-      {/* Glows */}
-      <div className="absolute top-[15%] right-[5%] w-[500px] h-[500px] rounded-full bg-[radial-gradient(circle,rgba(0,212,255,0.07)_0%,transparent_65%)] pointer-events-none" />
-      <div className="absolute bottom-[10%] left-[-5%] w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle,rgba(123,97,255,0.07)_0%,transparent_65%)] pointer-events-none" />
+    <section className="h-screen flex flex-col relative overflow-hidden bg-black">
+      {/* Background Text (Deep back) */}
+      <div className="absolute top-[15%] left-1/2 -translate-x-1/2 text-[clamp(120px,25vw,480px)] font-sora font-black text-white/[0.03] blur-[2px] pointer-events-none whitespace-nowrap z-0 select-none tracking-tighter uppercase">
+        AAKASH
+      </div>
 
-      <div className="max-w-[1200px] mx-auto w-full z-10 relative">
-        <div className="grid grid-cols-1 md:grid-cols-[1.1fr_0.9fr] gap-20 items-center">
-          {/* Left */}
-          <div>
-            {/* Availability badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-7 bg-accent/5 border border-accent/20">
-              <span className="w-[7px] h-[7px] rounded-full bg-accent shadow-[0_0_8px_theme('colors.accent')] inline-block" />
-              <span className="text-accent text-[11px] font-mono tracking-[0.1em] uppercase">
-                Open to Opportunities
-              </span>
-            </div>
-
-            <h1 className="font-syne font-extrabold m-0 mb-3 text-[clamp(40px,5.5vw,72px)] leading-[1.08] text-textLight">
-              Hi, I'm<br />
-              <span className="bg-[linear-gradient(125deg,theme('colors.accent')_0%,theme('colors.violet')_100%)] bg-clip-text text-transparent [-webkit-text-fill-color:transparent]">
-                Aakash Kumar
-              </span>
-            </h1>
-
-            {/* Role rotator */}
-            <div className="h-[34px] overflow-hidden mb-6">
-              <p className={`font-syne font-semibold text-[21px] text-dim m-0 transition-all duration-300 ease-in-out ${fade ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>
-                {roles[ri]}
-              </p>
-            </div>
-
-            <p className="font-outfit text-[17px] leading-[1.85] text-muted max-w-[530px] mb-9">
-              IIT Kanpur alumnus building scalable B2B & GenAI platforms. Specialised in 
-              <strong className="text-textLight font-semibold"> Java Spring Boot microservices</strong>, 
-              distributed systems, and cloud-native architectures.
-            </p>
-
-            {/* Stats row */}
-            <div className="flex flex-wrap gap-12 mb-10 pb-9 border-b border-borderW">
-              {[['2+','Yrs Exp'], ['30+','Projects'], ['~30%','Latency Gain'], ['B2B','Platform Scale']].map(([n,l]) => (
-                <div key={l}>
-                  <div className="font-syne font-extrabold text-[28px] text-accent leading-none">{n}</div>
-                  <div className="font-outfit text-xs text-dim mt-1.5 uppercase tracking-[0.07em]">{l}</div>
-                </div>
-              ))}
-            </div>
-
-            {/* CTAs */}
-            <div className="flex gap-3.5 flex-wrap mb-9">
-              <HeroBtn href="#projects" primary>View Projects →</HeroBtn>
-              <HeroBtn href="mailto:akskr.iitk@gmail.com">Get in Touch</HeroBtn>
-              <HeroBtn href="https://github.com/aksKrIITK" ghost>GitHub</HeroBtn>
-            </div>
-
-            {/* Socials */}
-            <div className="flex gap-3.5 flex-wrap">
-              {[
-                { label:'GitHub',   url:'https://github.com/aksKrIITK' },
-                { label:'LinkedIn', url:'https://www.linkedin.com/in/aakashkumariitk/' },
-                { label:'Email',    url:'mailto:akskr.iitk@gmail.com' },
-              ].map(s => (
-                <SocialPill key={s.label} {...s} />
-              ))}
-            </div>
-          </div>
-
-          {/* Right – photo card */}
-          <div className="flex justify-center md:justify-end">
-            <div className="relative">
-              <div className="w-[340px] h-[400px] rounded-3xl bg-[linear-gradient(150deg,theme('colors.bg3'),theme('colors.bg4'))] border border-borderC overflow-hidden relative shadow-[0_40px_80px_rgba(0,0,0,0.5),inset_0_0_0_1px_rgba(255,255,255,0.04)]">
-                <img src="/aks2.jpeg" alt="Aakash Kumar" className="w-full h-full object-cover opacity-90" />
-                <div className="absolute bottom-0 left-0 right-0 p-5 pb-5 bg-[linear-gradient(0deg,rgba(7,9,26,0.95)_0%,transparent_100%)]">
-                  <div className="font-syne font-bold text-textLight text-lg">Aakash Kumar</div>
-                  <div className="font-mono text-accent text-xs mt-1">Backend & GenAI Engineer · IIT Kanpur</div>
-                </div>
-              </div>
-
-              {/* Floating chips */}
-              <FloatChip style={{ top:-14, right:-28 }} col="#00d4ff">Java · Spring Boot</FloatChip>
-              <FloatChip style={{ bottom:80, left:-40 }} col="#7b61ff">Microservices</FloatChip>
-              <FloatChip style={{ bottom:-14, right:10 }} col="#f59e0b">AWS · Docker</FloatChip>
-            </div>
-          </div>
+      {/* Hero Image (Top 70%) */}
+      <div className="absolute top-0 left-0 w-full h-[70%] flex items-center justify-center z-10 pointer-events-none pt-10">
+        <div className="relative h-full flex items-center justify-center scale-110">
+          <img
+            src="/hero_3d.jpeg"
+            alt="Aakash Character"
+            className="h-full w-auto object-contain opacity-100 drop-shadow-[0_20px_60px_rgba(0,0,0,0.6)]"
+          />
         </div>
+      </div>
+
+
+
+      {/* Content Area (Bottom 30%) */}
+      <div className="mt-auto w-full min-h-[30%] z-20 relative flex flex-col items-center justify-center px-6 pb-4 bg-gradient-to-t from-black via-black/95 to-transparent gap-2">
+
+
+
+        {/* Headline — two lines with shadow on image */}
+        <div className="relative z-10 text-center w-full max-w-[700px]">
+
+          {/* Role Badge — just above headline, right-aligned */}
+          {/* <div className="flex justify-end mb-1">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-400/15 border border-yellow-400/50 backdrop-blur-sm shadow-[0_0_12px_rgba(250,204,21,0.25)] hover:bg-yellow-400/25 transition-colors duration-300 cursor-default">
+              <span className="w-2 h-2 rounded-full bg-yellow-400 animate-pulse shadow-[0_0_6px_rgba(250,204,21,0.8)]" />
+              <span className="text-yellow-300 font-poppins font-bold text-[11px] uppercase tracking-wider" style={{ textShadow: '0 0 8px rgba(250,204,21,0.6)' }}>Platform Developer & AI Architect</span>
+            </div>
+          </div> */}
+
+          {/* Shadow glow that bleeds upward onto image */}
+          <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-[120%] h-24 bg-gradient-to-t from-black/80 via-black/40 to-transparent blur-xl pointer-events-none rounded-full" />
+
+          <h1
+            className="font-sora font-bold text-[clamp(22px,4vw,36px)] leading-[1.15] text-white tracking-tighter uppercase italic text-center m-1 relative"
+            style={{
+              textShadow:
+                '0 -25px 50px rgba(0,0,0,1), 0 -12px 30px rgba(0,0,0,0.9), 0 -4px 15px rgba(0,0,0,0.8), 0 6px 20px rgba(0,0,0,0.9)'
+            }}
+          >
+            Automate Your{' '}
+            <span
+              className="text-accent"
+              style={{ textShadow: '0 -25px 50px rgba(0,0,0,0.95), 0 0 20px rgba(250,204,21,0.3)' }}
+            >
+              Workflows.
+            </span>
+            <br />
+            <span className="relative inline-block">
+              Scale Your Business Growth.
+              <div className="absolute -bottom-1 left-0 w-full h-[3px] bg-accent rounded-full shadow-[0_2px_10px_rgba(250,204,21,0.5)]" />
+            </span>
+          </h1>
+        </div>
+
+        {/* Tagline */}
+        <p className="font-poppins text-[13px] md:text-[15px] leading-[1.5] text-white max-w-[680px] text-center m-0">
+          I help businessess & startups <span className="text-accent font-semibold">modernize workflows, automate operations, and build scalable, intelligent systems</span> that drive growth and efficiency.
+        </p>
+
+        {/* CTAs */}
+        <div className="flex gap-6 items-center justify-center flex-wrap">
+          <a href="#contact" className="px-8 py-3 rounded-full bg-accent text-black font-poppins font-black text-[13px] no-underline hover:scale-[1.03] active:scale-95 transition-all shadow-[0_10px_25px_rgba(250,204,21,0.3)] uppercase tracking-widest text-center group relative overflow-hidden">
+            <span className="relative z-10">Book Free Strategy Session</span>
+            <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 skew-x-12" />
+          </a>
+          <a href="#projects" className="text-white font-poppins font-bold text-[13px] no-underline hover:text-accent transition-colors flex items-center gap-2 group uppercase tracking-widest">
+            View Portfolio <span className="text-xl group-hover:translate-x-2 transition-transform duration-300">→</span>
+          </a>
+        </div>
+
+      </div>
+
+      {/* Stats row — shifted below content area */}
+      <div className="w-full z-20 relative flex flex-wrap items-center justify-center gap-8 md:gap-20 px-6 py-5 border-t border-white/10 bg-black">
+        {[
+          ['50+', 'Systems Delivered'],
+          ['98%', 'Efficiency Gain'],
+          ['5+', 'Years Engineering'],
+          ['24/7', 'Strategic Support']
+        ].map(([n, l]) => (
+          <div key={l} className="flex flex-col items-center group cursor-default">
+            <div className="font-sora font-bold text-[28px] md:text-[36px] text-white leading-none tracking-tighter mb-1 group-hover:text-accent transition-colors duration-300">{n}</div>
+            <div className="font-poppins text-[9px] md:text-[11px] text-white/50 uppercase tracking-[0.2em] text-center font-bold">{l}</div>
+          </div>
+        ))}
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 opacity-40 z-30">
+        <div className="w-[1px] h-8 bg-gradient-to-b from-accent to-transparent animate-bounce" />
+        <span className="font-poppins text-[9px] uppercase tracking-[0.3em] text-accent">Scroll</span>
       </div>
     </section>
   );

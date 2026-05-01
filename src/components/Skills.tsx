@@ -1,8 +1,8 @@
 const skills = [
   { category: 'Frontend', items: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js', 'Vite'] },
-  { category: 'Backend', items: ['Java', 'Spring Boot', 'PostgreSQL', 'MongoDB', 'REST APIs'] },
-  { category: 'Tools', items: ['Git', 'Docker', 'CI/CD', 'AWS', 'Linux'] },
-  { category: 'AI', items: ['FastAPI', 'Python', 'VectorDB', 'RAG', 'Langgraph'] },
+  { category: 'Backend', items: ['Java', 'Spring Boot', 'FastAPI', 'Microservices', 'JPA/Hibernate'] },
+  { category: 'Cloud & DevOps', items: ['Git', 'Docker', 'CI/CD', 'AWS', 'Linux'] },
+  { category: 'AI/GenAI/Agentic AI', items: ['FastAPI', 'Python', 'VectorDB', 'RAG', 'Langgraph'] },
   { category: 'Soft Skills', items: ['Communication', 'Problem Solving', 'Leadership', 'Mentoring', 'Agile'] }
 ]
 

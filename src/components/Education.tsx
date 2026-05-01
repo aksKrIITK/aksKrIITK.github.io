@@ -16,24 +16,6 @@ const educations = [
     period: '2020 - 2022',
     grade: 'CGPA: 7.5/10',
     highlights: ['International Politics', 'Diplomacy', 'International Law', 'Global Security']
-  },
-  {
-    id: '3',
-    degree: 'Senior Secondary (12th)',
-    field: 'Science Stream',
-    school: 'Scholar Abode , Patna',
-    period: '2011 - 2013',
-    grade: 'Percentage: 87%',
-    highlights: ['Physics', 'Chemistry', 'Mathematics']
-  },
-  {
-    id: '4',
-    degree: 'Secondary (10th)',
-    field: 'All Subjects',
-    school: 'DAV Public School, Danapur Patna',
-    period: '2009 - 2010',
-    grade: 'CGPA: 9.6/10',
-    highlights: ['Mathematics', 'Science', 'English', 'Social Studies']
   }
 ]
 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sora:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -12,15 +12,17 @@
   }
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
   body {
     background-color: theme('colors.bg');
     color: theme('colors.textLight');
-    font-family: theme('fontFamily.outfit');
+    font-family: theme('fontFamily.poppins');
+    overflow-x: hidden;
   }
   ::selection {
-    background-color: rgba(0, 212, 255, 0.3);
-    color: theme('colors.accent');
+    background-color: theme('colors.accent');
+    color: theme('colors.textLight');
   }
   ::-webkit-scrollbar {
     width: 6px;
@@ -29,7 +31,7 @@
     background: theme('colors.bg2');
   }
   ::-webkit-scrollbar-thumb {
-    background: rgba(0, 212, 255, 0.6);
+    background: theme('colors.accent');
     border-radius: 6px;
   }
   input::placeholder, textarea::placeholder {

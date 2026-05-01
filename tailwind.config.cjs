@@ -7,22 +7,22 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        bg: '#07091a',
-        bg2: '#0c1024',
-        bg3: '#111627',
-        bg4: '#18203a',
-        accent: '#00d4ff',
-        violet: '#7b61ff',
-        amber: '#f59e0b',
-        textLight: '#e2e8f0',
-        muted: '#8892a4',
-        dim: '#4a5568',
-        borderC: 'rgba(0, 212, 255, 0.12)',
-        borderW: 'rgba(255, 255, 255, 0.07)',
+        bg: '#000000',
+        bg2: '#0A0A0A',
+        bg3: '#141414',
+        bg4: '#1E1E1E',
+        accent: '#FACC15', // Yellow
+        violet: '#EAB308', // Secondary Yellow
+        amber: '#CA8A04', // Tertiary Yellow
+        textLight: '#FFFFFF',
+        muted: '#A3A3A3',
+        dim: '#737373',
+        borderC: 'rgba(250, 204, 21, 0.2)', // based on yellow
+        borderW: 'rgba(255, 255, 255, 0.1)',
       },
       fontFamily: {
-        syne: ['Syne', 'sans-serif'],
-        outfit: ['Outfit', 'sans-serif'],
+        sora: ['Sora', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
       },
     },
